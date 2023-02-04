@@ -2,5 +2,5 @@
 
 ## Features:
 
-- [ x ] - Search
-- [ x ] - View job on single page
+- [x] Search
+- [x] View job on single page

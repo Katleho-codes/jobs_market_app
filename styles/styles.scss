@@ -57,6 +57,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: .3rem;
+    cursor: pointer;
 
     .img_wrapper {
         position: relative;
@@ -115,10 +116,117 @@ body {
 }
 
 
+// View single job
+.singleJobview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 2rem;
+    padding: 0 1rem;
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+        height: auto;
+        border-radius: 5px;
+        width: 100%;
+
+        .left_col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            padding: 3rem 0;
+
+            img {
+                width: 100%;
+                max-width: 10rem;
+                height: auto;
+            }
+
+        }
+
+        .right_col {
+            padding: 1rem;
+
+            h3 {
+                color: #212529;
+                text-transform: capitalize;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            .aboutJob {
+                display: flex;
+                gap: .8rem;
+                color: #6c757d;
+                font-weight: 500;
+                margin-top: 0;
+            }
+
+            .company {
+                color: #212529;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+            .location {
+                color: #0077b6;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .backToHomeBtn {
+        cursor: pointer;
+        background-color: #ff8800;
+        color: white;
+        font-weight: 500;
+        font-family: inherit;
+        margin-left: 0;
+        padding: 12px 20px;
+        border: 1px solid #ff8800;
+        border-radius: 5px;
+        text-decoration: none;
+
+        &:hover {
+            opacity: .9;
+            transition: .2s ease;
+        }
+    }
+}
+
 @media (min-width: 800px) {
     .jobs {
         display: grid;
         gap: 2rem;
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    .singleJobview {
+        article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: auto;
+
+            .left_col {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+
+
+                img {
+                    width: 10rem;
+                    height: auto;
+                }
+
+            }
+        }
     }
 }

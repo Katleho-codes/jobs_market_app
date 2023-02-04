@@ -1,19 +1,10 @@
 import logo from "./logo.svg";
 
-interface jobProp {
-  id: number;
-  logo: React.ReactNode;
-  job: string;
-  createdAt: string;
-  typeOfJob: string;
-  company: string;
-  location: string;
-}
-let jobs: jobProp = [
+let jobs = [
   {
     id: 1,
     logo: logo,
-    job: "Fronend Developer",
+    job: "Frontend Developer",
     createdAt: "5h ago",
     typeOfJob: "Full Time",
     company: "Coca Cola",
